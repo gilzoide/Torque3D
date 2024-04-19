@@ -373,7 +373,7 @@ if (TORQUE_DYNAMIC_LIBRARY AND NOT TORQUE_TESTING)
   target_compile_definitions(TorqueEngine PUBLIC ${TORQUE_COMPILE_DEFINITIONS})
   target_link_libraries(TorqueEngine ${TORQUE_LINK_LIBRARIES})
   if (APPLE)
-   target_link_libraries(TorqueEngine "-framework Cocoa")
+    target_link_libraries(TorqueEngine ${TORQUE_LINK_FRAMEWORKS})
   endif (APPLE)
   target_include_directories(TorqueEngine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} "${CMAKE_BINARY_DIR}/temp" ${TORQUE_INCLUDE_DIRECTORIES})
 
